@@ -1,0 +1,62 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static "forum/css/w3.css" %}">
+    <title>Title</title>
+</head>
+<body>
+    <div class="w3-bar w3-blue-gray">
+      <button class="w3-bar-item w3-button" onclick="openCity('Accueil')">ACCUEIL</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Bot')">BOT</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Auteur')">AUTEUR</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Forum')">FORUM</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Roboia')">ROBO-IA</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Contact')">CONTACT</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Aide')">AIDE</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Projet')">PROJET(S)</button>
+    </div>
+
+    <div id="Accueil" class="w3-container city">
+      <h2>accueil</h2>
+
+    </div>
+
+    <div id="Bot" class="w3-container city">
+      <h2>bot</h2>
+    </div>
+
+    <div id="Auteur" class="w3-container city" style="display:none">
+      {% include 'apphome/layouts/_autor.html' %}
+    </div>
+
+    <div id="Forum" class="w3-container city" style="display:none">
+      <h2>forum</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Roboia" class="w3-container city" style="display:none">
+        <h2>robo-ia</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Contact" class="w3-container city" style="display:none">
+        <h2>contact</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Aide" class="w3-container city" style="display:none">
+        <h2>aide</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Projet" class="w3-container city" style="display:none">
+        <h2>projets</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+<script type="text/javascript" src="{% static 'apphome/js/style.js' %}"></script>
+</body>
+</html>
